@@ -31,6 +31,44 @@ LED _ROJO, LED_VERDE, LED_AZUL, LED_AMARILLO son #define asociados a los pines 5
 (Breve explicación de la función)
 
 ~~~ c (lenguaje en el que esta escrito)
+#define A 12
+#define B 13
+#define C 7
+#define D 8
+#define E 9
+#define F 11
+#define G 10
+#define LED_VERDE 4
+#define LED_AZUL 3
+#define LED_ROJO 5
+#define LED_AMARILLO 2
+
+int lecturaTemperatura = 0;
+int temperaturaRealC = 0;
+int currentTime = 0;
+int previousTime =0;
+int ledState = 0;
+
+void printDigit(char valor);
+
+void setup()
+{
+  
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+
 void loop()
 {
   lecturaTemperatura = analogRead(A0); 
@@ -84,12 +122,12 @@ void printDigit(char valor)
   	case 'c':
   	{
         digitalWrite(A, HIGH);
- 	      digitalWrite(D, HIGH);
+ 	    digitalWrite(D, HIGH);
         digitalWrite(E, HIGH);
         digitalWrite(F, HIGH);
       	digitalWrite(LED_ROJO,HIGH);
         digitalWrite(LED_VERDE, LOW);
- 		  digitalWrite(LED_AZUL, LOW);
+ 		digitalWrite(LED_AZUL, LOW);
       	break;
   	}
     case 'f':
@@ -100,20 +138,19 @@ void printDigit(char valor)
         digitalWrite(G, HIGH);
       	digitalWrite(LED_AZUL,HIGH);
       	digitalWrite(LED_ROJO, LOW);
-  	    digitalWrite(LED_VERDE, LOW);
+  		digitalWrite(LED_VERDE, LOW);
       	break;
   	}
   
     case 'd':
       	digitalWrite(G, HIGH);
-    	  digitalWrite(LED_VERDE,HIGH);
+    	digitalWrite(LED_VERDE,HIGH);
       	digitalWrite(LED_ROJO, LOW);
-  		  digitalWrite(LED_AZUL, LOW);
+  		digitalWrite(LED_AZUL, LOW);
       	break;
   }
 
 }
-
 ~~~
 
 ## :robot: Link al proyecto

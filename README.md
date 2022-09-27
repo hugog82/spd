@@ -12,7 +12,7 @@
 - Enrico Montes
 - Enzo Amichetti
 
-## Proyecto: Contador binario.
+## Proyecto: Sensor de Temperatura.
 ![Tinkercad](./img/sensorFrigorifico.png)
 
 
